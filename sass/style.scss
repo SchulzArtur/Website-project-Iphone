@@ -1,118 +1,396 @@
- @import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
- $fontArvo:"Arvo";
- $whiteColor: white;
- $buttonColor: rgb(22,
- 160,
- 133);
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+$fontArvo:"Arvo";
+$whiteColor: white;
+$buttonColor: rgb(22,
+160,
+133);
+$sectionColor: rgb(245,
+246,
+247);
 
- * {
-     padding: 0;
-     margin: 0;
-     font-family: "Times New Roman";
- }
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+}
 
- .container {
-     max-width: 1025px;
-     width: 100%;
-     margin: 0 auto;
- }
+button,
+input {
+    outline: transparent;
+}
 
- #jumbotron {
-     background-image: url("../images/background-jumbotron.jpg");
-     height: 100vh;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
+.container {
+    max-width: 1025px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-     ul {
-         display: flex;
-         justify-content: center;
-         list-style-type: none;
-         align-items: center;
+#jumbotron {
+    background-image: url("../images/background-jumbotron.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-         li {
-             padding: 50px 50px;
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        align-items: center;
+
+        li {
+            padding: 50px 50px;
 
 
-             a {
-                 font-size: 16px;
-                 font-weight: 400;
-                 text-transform: uppercase;
-                 color: $whiteColor;
-                 font-family: $fontArvo;
-                 text-decoration: none;
-                 transition: 0.5s;
-                 &:hover {
-                     color: $buttonColor;
-                 }
-             }
-         }
-     }
-     .jumbotron-title {
-         text-align: center;
-         padding-top: 140px;
-         h1 {
-             font-size: 42px;
-             font-family: $fontArvo;
-             color: $whiteColor;
-             font-weight: bold;
-             text-transform: uppercase;
-         }
-         p {
-             font-size: 16px;
-             font-family: $fontArvo;
-             color: $whiteColor;
-             padding-top: 10px;
-         }
-     }
- }
+            a {
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $whiteColor;
+                font-family: $fontArvo;
+                text-decoration: none;
+                transition: 0.5s;
+                &:hover {
+                    color: $buttonColor;
+                }
+            }
+        }
+    }
+    .jumbotron-title {
+        text-align: center;
+        padding-top: 140px;
+        h1 {
+            font-size: 42px;
+            font-family: $fontArvo;
+            color: $whiteColor;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            font-family: $fontArvo;
+            color: $whiteColor;
+            padding-top: 10px;
+        }
+    }
+    .social-media {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        button {
+            background: none;
+            border: none;
+            .fab {
+                color: $whiteColor;
+                font-size: 30px;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 450px;
+                transition: 0.5s;
+            }
+            .fa-twitter {
+                &:hover {
+                    color: #00aced;
+                }
+            }
+            .fa-flickr {
+                &:hover {
+                    color: #ff0084;
+                }
+            }
+            .fa-dribbble {
+                &:hover {
+                    color: #ea4c89;
+                }
+            }
+        }
+    }
+}
 
- .btn {
-     border-radius: 3px;
-     background-color: $buttonColor;
-     width: 166px;
-     height: 49px;
-     cursor: pointer;
-     font-size: 12px;
-     font-family: $fontArvo;
-     color: $whiteColor;
-     font-weight: bold;
-     text-transform: uppercase;
-     border: none;
-     margin-top: 30px;
-     outline: none;
- }
 
- .hvr-curl-top-right {
-     display: inline-block;
-     vertical-align: middle;
-     -webkit-transform: perspective(1px) translateZ(0);
-     transform: perspective(1px) translateZ(0);
-     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-     position: relative;
- }
 
- .hvr-curl-top-right:before {
-     pointer-events: none;
-     position: absolute;
-     content: '';
-     height: 0;
-     width: 0;
-     top: 0;
-     right: 0;
-     background: white;
-     /* IE9 */
-     background: linear-gradient(225deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
-     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
-     -webkit-transition-duration: 0.3s;
-     transition-duration: 0.3s;
-     -webkit-transition-property: width, height;
-     transition-property: width, height;
- }
+.btn {
+    border-radius: 3px;
+    background-color: $buttonColor;
+    width: 166px;
+    height: 49px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: $fontArvo;
+    color: $whiteColor;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 30px;
+}
 
- .hvr-curl-top-right:hover:before,
- .hvr-curl-top-right:focus:before,
- .hvr-curl-top-right:active:before {
-     width: 25px;
-     height: 25px;
- }
+.hvr-curl-top-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.hvr-curl-top-right:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(225deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: width, height;
+    transition-property: width, height;
+}
+
+.hvr-curl-top-right:hover:before,
+.hvr-curl-top-right:focus:before,
+.hvr-curl-top-right:active:before {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+#phone-section {
+    background-color: $sectionColor;
+    height: 490px;
+    overflow: hidden;
+    .flex-phone {
+        display: flex;
+        padding-top: 90px;
+        h2 {
+            color: $buttonColor;
+            font-family: $fontArvo;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        p {
+            padding-top: 30px;
+            font-family: $fontArvo;
+            font-size: 12px;
+            line-height: 2;
+        }
+    }
+}
+
+#iphone {
+    background-color: $whiteColor;
+    padding-top: 145px;
+    height: 500px;
+    overflow: hidden;
+    .flex-iphone {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            color: $buttonColor;
+            font-family: $fontArvo;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        p {
+            padding-top: 30px;
+            font-family: $fontArvo;
+            font-size: 12px;
+            line-height: 2;
+        }
+    }
+}
+
+
+
+
+
+#community {
+    background-color: $sectionColor;
+    padding: 120px 0;
+
+    .flex-community {
+        display: flex;
+
+        .community {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+                font-family: $fontArvo;
+                text-transform: uppercase;
+                font-size: 18px;
+                padding-bottom: 20px;
+            }
+            p {
+                font-family: $fontArvo;
+                font-size: 12px;
+                line-height: 1;
+            }
+            img {
+                padding-bottom: 30px;
+            }
+        }
+        .pictures {
+            display: flex;
+            img {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+#email-section {
+    background-image: url("../images/background-email.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .flex-email {
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            color: $whiteColor;
+            font-family: $fontArvo;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            .form {
+                display: flex;
+                padding-top: 20px;
+                input {
+                    text-transform: uppercase;
+                    width: 280px;
+                    height: 40px;
+                    color: black;
+                    padding-left: 10px;
+                    font-family: $fontArvo;
+                    font-weight: bold;
+                    border: none;
+                }
+                button {
+                    border: none;
+                    cursor: pointer;
+                    height: 40px;
+                    width: 50px;
+                    background-color: $buttonColor;
+                    border: none;
+                    &:hover {
+                        .fas {
+                            font-size: 22px;
+                        }
+                    }
+
+                    .fas {
+                        font-size: 18px;
+                        color: $whiteColor;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#download-section {
+    background-color: $sectionColor;
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: $fontArvo;
+        padding-top: 90px;
+    }
+    p {
+        text-align: center;
+        font-family: $fontArvo;
+        font-size: 16px;
+        line-height: 1;
+        padding-top: 10px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        button {
+            background-color: rgb(26, 188, 156);
+            width: 240px;
+            height: 56px;
+            border: none;
+            margin-right: 15px;
+            color: $whiteColor;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: 115px;
+            &:hover {
+                .fab {
+                    font-size: 34px;
+                }
+            }
+        }
+        .fab {
+            font-size: 28px;
+            padding: 12px 10px;
+            background-color: $buttonColor;
+            height: 56px;
+            width: 60px;
+            transition: 0.3s;
+        }
+    }
+}
+
+footer {
+    .flex-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                border-right: 2px solid $buttonColor;
+                padding: 0 5px;
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: black;
+                    transition: 0.5s;
+                    font-family: $fontArvo;
+                    &:hover {
+                        color: $buttonColor;
+                    }
+                }
+            }
+        }
+        p {
+            font-family: $fontArvo;
+            font-size: 16px;
+            padding-left: 5px;
+            padding-top: 30px;
+        }
+    }
+}

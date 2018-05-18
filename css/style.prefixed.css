@@ -3,6 +3,12 @@
   padding: 0;
   margin: 0;
   font-family: "Times New Roman";
+  box-sizing: border-box;
+}
+
+button,
+input {
+  outline: transparent;
 }
 
 .container {
@@ -67,6 +73,41 @@
   padding-top: 10px;
 }
 
+#jumbotron .social-media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#jumbotron .social-media button {
+  background: none;
+  border: none;
+}
+
+#jumbotron .social-media button .fab {
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 450px;
+  transition: 0.5s;
+}
+
+#jumbotron .social-media button .fa-twitter:hover {
+  color: #00aced;
+}
+
+#jumbotron .social-media button .fa-flickr:hover {
+  color: #ff0084;
+}
+
+#jumbotron .social-media button .fa-dribbble:hover {
+  color: #ea4c89;
+}
+
 .btn {
   border-radius: 3px;
   background-color: #16a085;
@@ -80,7 +121,6 @@
   text-transform: uppercase;
   border: none;
   margin-top: 30px;
-  outline: none;
 }
 
 .hvr-curl-top-right {
@@ -112,5 +152,277 @@
 .hvr-curl-top-right:active:before {
   width: 25px;
   height: 25px;
+}
+
+#phone-section {
+  background-color: #f5f6f7;
+  height: 490px;
+  overflow: hidden;
+}
+
+#phone-section .flex-phone {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 90px;
+}
+
+#phone-section .flex-phone h2 {
+  color: #16a085;
+  font-family: "Arvo";
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#phone-section .flex-phone p {
+  padding-top: 30px;
+  font-family: "Arvo";
+  font-size: 12px;
+  line-height: 2;
+}
+
+#iphone {
+  background-color: white;
+  padding-top: 145px;
+  height: 500px;
+  overflow: hidden;
+}
+
+#iphone .flex-iphone {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+#iphone .flex-iphone h2 {
+  color: #16a085;
+  font-family: "Arvo";
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#iphone .flex-iphone p {
+  padding-top: 30px;
+  font-family: "Arvo";
+  font-size: 12px;
+  line-height: 2;
+}
+
+#community {
+  background-color: #f5f6f7;
+  padding: 120px 0;
+}
+
+#community .flex-community {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#community .flex-community .community {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center;
+}
+
+#community .flex-community .community h2 {
+  font-family: "Arvo";
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+#community .flex-community .community p {
+  font-family: "Arvo";
+  font-size: 12px;
+  line-height: 1;
+}
+
+#community .flex-community .community img {
+  padding-bottom: 30px;
+}
+
+#community .flex-community .pictures {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#community .flex-community .pictures img {
+  padding: 0 5px;
+}
+
+#email-section {
+  background-image: url("../images/background-email.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+#email-section .flex-email h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: white;
+  font-family: "Arvo";
+}
+
+#email-section .flex-email form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#email-section .flex-email form .form {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+#email-section .flex-email form .form input {
+  text-transform: uppercase;
+  width: 280px;
+  height: 40px;
+  color: black;
+  padding-left: 10px;
+  font-family: "Arvo";
+  font-weight: bold;
+  border: none;
+}
+
+#email-section .flex-email form .form button {
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  background-color: #16a085;
+  border: none;
+}
+
+#email-section .flex-email form .form button:hover .fas {
+  font-size: 22px;
+}
+
+#email-section .flex-email form .form button .fas {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#download-section {
+  background-color: #f5f6f7;
+}
+
+#download-section h2 {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Arvo";
+  padding-top: 90px;
+}
+
+#download-section p {
+  text-align: center;
+  font-family: "Arvo";
+  font-size: 16px;
+  line-height: 1;
+  padding-top: 10px;
+}
+
+#download-section .buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-top: 40px;
+}
+
+#download-section .buttons button {
+  background-color: #1abc9c;
+  width: 240px;
+  height: 56px;
+  border: none;
+  margin-right: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-left: 30px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 115px;
+}
+
+#download-section .buttons button:hover .fab {
+  font-size: 34px;
+}
+
+#download-section .buttons .fab {
+  font-size: 28px;
+  padding: 12px 10px;
+  background-color: #16a085;
+  height: 56px;
+  width: 60px;
+  transition: 0.3s;
+}
+
+footer .flex-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 30px;
+}
+
+footer .flex-footer ul {
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+footer .flex-footer ul li {
+  border-right: 2px solid #16a085;
+  padding: 0 5px;
+}
+
+footer .flex-footer ul li:last-child {
+  border: none;
+}
+
+footer .flex-footer ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-family: "Arvo";
+}
+
+footer .flex-footer ul li a:hover {
+  color: #16a085;
+}
+
+footer .flex-footer p {
+  font-family: "Arvo";
+  font-size: 16px;
+  padding-left: 5px;
+  padding-top: 30px;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
