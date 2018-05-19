@@ -19,24 +19,42 @@ input {
 
 #jumbotron {
   background-image: url("../images/background-jumbotron.jpg");
-  height: 100vh;
+  height: 750px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 #jumbotron ul {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   list-style-type: none;
   -ms-flex-align: center;
       align-items: center;
+  padding-top: 50px;
 }
 
 #jumbotron ul li {
-  padding: 50px 50px;
+  position: relative;
+  padding: 10px 0;
+}
+
+#jumbotron ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: none;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+
+#jumbotron ul li ul li {
+  clear: both;
+  width: 100%;
+  border: 1px solid #16a085;
+  margin: 3px 0;
 }
 
 #jumbotron ul li a {
@@ -46,6 +64,7 @@ input {
   color: white;
   font-family: "Arvo";
   text-decoration: none;
+  padding: 10px 20px;
   transition: 0.5s;
 }
 
@@ -53,9 +72,16 @@ input {
   color: #16a085;
 }
 
+#jumbotron ul li:hover > ul,
+#jumbotron ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
 #jumbotron .jumbotron-title {
   text-align: center;
-  padding-top: 140px;
+  padding-top: 150px;
 }
 
 #jumbotron .jumbotron-title h1 {
@@ -73,11 +99,13 @@ input {
   padding-top: 10px;
 }
 
+#jumbotron .jumbotron-title button {
+  margin-bottom: 200px;
+}
+
 #jumbotron .social-media {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: baseline;
-      align-items: baseline;
   -ms-flex-pack: center;
       justify-content: center;
 }
@@ -92,7 +120,6 @@ input {
   font-size: 30px;
   padding: 10px;
   cursor: pointer;
-  margin-top: 450px;
   transition: 0.5s;
 }
 
@@ -216,6 +243,8 @@ input {
 #community .flex-community {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 #community .flex-community .community {
@@ -247,13 +276,14 @@ input {
   padding-bottom: 30px;
 }
 
-#community .flex-community .pictures {
-  display: -ms-flexbox;
-  display: flex;
+#community .flex-community .swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
-#community .flex-community .pictures img {
-  padding: 0 5px;
+#community .flex-community .swiper-slide {
+  background-position: center;
+  background-size: cover;
 }
 
 #email-section {
@@ -424,5 +454,24 @@ footer .flex-footer p {
   font-size: 16px;
   padding-left: 5px;
   padding-top: 30px;
+}
+
+@media (max-width: 1199px) {
+  #jumbotron ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #phone-section .flex-phone {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #iphone .flex-iphone {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #community .flex-community .community {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
