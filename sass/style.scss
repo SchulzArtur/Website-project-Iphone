@@ -289,7 +289,7 @@
                 }
             }
             .swiper-container {
-                width: 600px;
+                width: 50%;
                 height: 300px;
             }
 
@@ -553,6 +553,17 @@
                 }
             }
         }
+        #email-section {
+            .flex-email {
+                form {
+                    .form {
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
         #download-section {
 
             .flex-download {
@@ -570,6 +581,49 @@
 
 
 
-    @media(max-width: 640px) {}
+    @media(max-width: 640px) {
+        #jumbotron {
+            height: auto;
+        }
+        #community {
+            .flex-community {
+                .swiper-container {
+                    width: 100%;
+                }
+            }
+        }
+        #download-section {
+
+            .flex-download {
+                .buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    button {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+        footer {
+            .flex-footer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .footer-nav {
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    p {
+                        padding-top: 10px;
+                    }
+                }
+                img {
+                    object-fit: contain;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
 
     @media(max-width: 420px) {}

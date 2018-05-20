@@ -277,7 +277,7 @@ input {
 }
 
 #community .flex-community .swiper-container {
-  width: 600px;
+  width: 50%;
   height: 300px;
 }
 
@@ -521,9 +521,44 @@ footer .flex-footer p {
   #community .flex-community .community {
     margin-bottom: 50px;
   }
+  #email-section .flex-email form .form input {
+    width: 100%;
+  }
   #download-section .flex-download {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  #jumbotron {
+    height: auto;
+  }
+  #community .flex-community .swiper-container {
+    width: 100%;
+  }
+  #download-section .flex-download .buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #download-section .flex-download .buttons button {
+    margin-bottom: 50px;
+  }
+  footer .flex-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .flex-footer .footer-nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  footer .flex-footer .footer-nav p {
+    padding-top: 10px;
+  }
+  footer .flex-footer img {
+    object-fit: contain;
+    padding-top: 10px;
   }
 }
 
