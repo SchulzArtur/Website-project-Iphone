@@ -25,7 +25,18 @@ input {
   background-position: bottom;
 }
 
-#jumbotron ul {
+#jumbotron nav label {
+  margin-right: 20px;
+  font-size: 26px;
+  display: none;
+  width: 26px;
+}
+
+#jumbotron nav #toggle {
+  display: none;
+}
+
+#jumbotron nav ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -36,12 +47,12 @@ input {
   padding-top: 50px;
 }
 
-#jumbotron ul li {
+#jumbotron nav ul li {
   position: relative;
   padding: 10px 0;
 }
 
-#jumbotron ul li ul {
+#jumbotron nav ul li ul {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -50,14 +61,14 @@ input {
   transition: 0.5s;
 }
 
-#jumbotron ul li ul li {
+#jumbotron nav ul li ul li {
   clear: both;
   width: 100%;
   border: 1px solid #16a085;
   margin: 3px 0;
 }
 
-#jumbotron ul li a {
+#jumbotron nav ul li a {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
@@ -68,7 +79,7 @@ input {
   transition: 0.5s;
 }
 
-#jumbotron ul li a:hover {
+#jumbotron nav ul li a:hover {
   color: #16a085;
 }
 
@@ -470,6 +481,74 @@ footer .flex-footer p {
     padding-right: 20px;
   }
   #community .flex-community .community {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  #jumbotron header nav {
+    padding-top: 30px;
+  }
+  #jumbotron header nav label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s;
+    float: right;
+  }
+  #jumbotron header nav ul {
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  #jumbotron header nav ul li ul li {
+    background-color: #16a085;
+  }
+  #jumbotron header nav ul li ul li a:hover {
+    color: white;
+    transform: scale(1.2);
+  }
+  #jumbotron header nav ul a {
+    display: block;
+  }
+  #jumbotron header nav #toggle:checked + ul {
+    display: block;
+  }
+  #phone-section {
+    height: 420px;
+  }
+  #phone-section .flex-phone .title-section-phone {
+    text-align: center;
+  }
+  #phone-section .flex-phone img {
+    display: none;
+  }
+  #iphone {
+    padding-top: 90px;
+    height: 420px;
+  }
+  #iphone .flex-iphone {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  #iphone .flex-iphone .title-section-phone {
+    text-align: center;
+  }
+  #iphone .flex-iphone img {
+    display: none;
+  }
+  #community {
+    padding-top: 80px;
+  }
+  #community .flex-community {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  #community .flex-community .community {
+    margin-bottom: 50px;
+  }
+  #download-section .flex-download {
     padding-left: 20px;
     padding-right: 20px;
   }

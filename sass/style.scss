@@ -32,55 +32,65 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+        nav {
+            label {
+                margin-right: 20px;
+                font-size: 26px;
+                display: none;
+                width: 26px;
+            }
+            #toggle {
+                display: none;
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
 
-        ul {
-            display: flex;
-            justify-content: space-between;
-
-            list-style-type: none;
-            align-items: center;
-            padding-top: 50px;
+                list-style-type: none;
+                align-items: center;
+                padding-top: 50px;
 
 
-            li {
-                position: relative;
-                padding: 10px 0;
-
-
-
-
-                ul {
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    display: none;
-                    padding-top: 10px;
-                    transition: 0.5s;
+                li {
+                    position: relative;
+                    padding: 10px 0;
 
 
 
 
-                    li {
-                        clear: both;
-                        width: 100%;
-                        border: 1px solid $buttonColor;
-                        margin: 3px 0;
+                    ul {
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        display: none;
+                        padding-top: 10px;
+                        transition: 0.5s;
+
+
+
+
+                        li {
+                            clear: both;
+                            width: 100%;
+                            border: 1px solid $buttonColor;
+                            margin: 3px 0;
+                        }
                     }
-                }
 
 
-                a {
-                    font-size: 16px;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    color: $whiteColor;
-                    font-family: $fontArvo;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    transition: 0.5s;
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        color: $whiteColor;
+                        font-family: $fontArvo;
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        transition: 0.5s;
 
-                    &:hover {
-                        color: $buttonColor;
+                        &:hover {
+                            color: $buttonColor;
+                        }
                     }
                 }
             }
@@ -468,8 +478,89 @@
         }
     }
 
-    @media(max-width: 991px) {}
+    @media(max-width: 991px) {
+        #jumbotron {
+            header {
+                nav {
+                    padding-top: 30px;
+                    label {
+                        display: inline-block;
+                        cursor: pointer;
+                        color: white;
+                        transition: 0.6s;
+                        float: right;
+                        &:hover {}
+                    }
 
+                    ul {
+                        text-align: center;
+                        width: 100%;
+                        display: none;
+                        li {
+                            ul {
+                                li {
+                                    background-color: $buttonColor;
+                                    a {
+                                        &:hover {
+                                            color: $whiteColor;
+                                            transform: scale(1.2);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    #toggle:checked+ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+        #phone-section {
+            height: 420px;
+            .flex-phone {
+                .title-section-phone {
+                    text-align: center;
+                }
+                img {
+                    display: none;
+                }
+            }
+        }
+        #iphone {
+            padding-top: 90px;
+            height: 420px;
+            .flex-iphone {
+                justify-content: center;
+                .title-section-phone {
+                    text-align: center;
+                }
+                img {
+                    display: none;
+                }
+            }
+        }
+        #community {
+            padding-top: 80px;
+            .flex-community {
+                flex-direction: column;
+                .community {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        #download-section {
+
+            .flex-download {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
 
 
 
@@ -480,3 +571,5 @@
 
 
     @media(max-width: 640px) {}
+
+    @media(max-width: 420px) {}
