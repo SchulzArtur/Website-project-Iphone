@@ -1,1 +1,1 @@
-https://schulzartur.github.io/project-Iphone/
+https://schulzartur.github.io/Website-project-Iphone/
